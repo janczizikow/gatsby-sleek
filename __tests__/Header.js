@@ -1,4 +1,4 @@
-import Header from '../src/components/header.js';
+import Header from '../src/components/Header';
 
 describe('<Header />', () => {
   let wrapper;
