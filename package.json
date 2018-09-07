@@ -1,0 +1,72 @@
+{
+  "name": "gatsby-sleek",
+  "version": "1.0.0",
+  "repository": "git@github.com:janczizikow/gatsby-sleek.git",
+  "author": "Jan Czizikow <jan.czizikow@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev": "gatsby develop",
+    "build": "gatsby build",
+    "format": "prettier --write 'src/**/*.js'",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "gatsby": "^2.0.0-rc.13",
+    "gatsby-plugin-favicon": "^3.1.4",
+    "gatsby-plugin-google-tagmanager": "^2.0.0-rc.1",
+    "gatsby-plugin-manifest": "^2.0.2-rc.1",
+    "gatsby-plugin-nprogress": "^2.0.0-rc.1",
+    "gatsby-plugin-offline": "^2.0.0-rc.4",
+    "gatsby-plugin-polyfill-io": "^1.0.4",
+    "gatsby-plugin-react-helmet": "^3.0.0-rc.1",
+    "gatsby-plugin-resolve-src": "^2.0.0-beta.1",
+    "gatsby-plugin-sharp": "^2.0.0-rc.3",
+    "gatsby-plugin-sitemap": "^2.0.0-rc.1",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0",
+    "react-helmet": "^5.2.0",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-0",
+    "babel-jest": "^23.4.2",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "enzyme-to-json": "^3.3.4",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^23.5.0",
+    "prettier": "^1.14.2"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "<rootDir>/jest-preprocess.js"
+    },
+    "testRegex": "/.*(__tests__\\/.*)|(.*(test|spec))\\.jsx?$",
+    "moduleNameMapper": {
+      ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js"
+    },
+    "testPathIgnorePatterns": [
+      "node_modules",
+      ".cache"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(gatsby)/)"
+    ],
+    "globals": {
+      "__PATH_PREFIX__": ""
+    },
+    "testURL": "http://localhost",
+    "setupFiles": [
+      "<rootDir>/loadershim.js"
+    ]
+  }
+}
