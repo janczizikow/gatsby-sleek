@@ -15,6 +15,7 @@ The starter includes:
 * [Prettier](https://github.com/prettier/prettier) for code formating
 * [Husky](https://github.com/typicode/husky) precommit hooks for linting js and css
 * Jest and Enzyme for testing
+* Environment variables with [dotenv](https://github.com/motdotla/dotenv)
 * Handy gatsby plugins:
   * [gatsby-plugin-polyfill-io](https://github.com/escaladesports/gatsby-plugin-polyfill-io) - polyfilling with [Polyfill.io](https://polyfill.io/v2/docs/)
   * [gatsby-plugin-favicon](https://github.com/Creatiwity/gatsby-plugin-favicon) - generating favicons for different browsers and devices
@@ -25,6 +26,10 @@ The starter includes:
   * [gatsby-plugin-react-helmet](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-react-helmet) - control your document head using [React Helmet](https://github.com/nfl/react-helmet) component
   * [gatsby-plugin-resolve-src](https://github.com/alampros/gatsby-plugin-resolve-src) - resolve imports from the src subdirectory
   * [gatsby-plugin-sitemap](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-sitemap) - generates sitemap
+  * [gatsby-plugin-react-svg](https://github.com/jacobmischka/gatsby-plugin-react-svg) - adds svg svg-react-loader to webpack
+  * [gatsby-image](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-image) & related plugins for optimized images
+  * [gatsby-plugin-netlify-cache](https://github.com/axe312ger/gatsby-plugin-netlify-cache) - speeds up netlify build time
+  * [gatsby-plugin-netlify](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-netlify) - auto generate headers and redirect rules for netlify
 
 ## Install
 
