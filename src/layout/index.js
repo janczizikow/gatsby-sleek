@@ -8,8 +8,33 @@ import Header from 'components/Header';
 import * as actionCreators from 'store/actions';
 import './layout.css';
 
+const propTypes = {
+  ctr: PropTypes.number,
+  onIncrementCounter: PropTypes.func,
+  onDecrementCounter: PropTypes.func,
+  onAddCounter: PropTypes.func,
+  onSubstractCounter: PropTypes.func,
+  storedResults: PropTypes.instanceOf(Array),
+  onStoreResult: PropTypes.func,
+  onRemoveResult: PropTypes.func,
+  children: PropTypes.node.isRequired,
+};
+
+/* eslint-disable react/prefer-stateless-function */
 class Layout extends Component {
   render() {
+    const {
+      ctr,
+      onIncrementCounter,
+      onDecrementCounter,
+      onAddCounter,
+      onSubstractCounter,
+      storedResults,
+      onRemoveResult,
+      onStoreResult,
+      children,
+    } = this.props;
+
     return (
       <StaticQuery
         query={graphql`
@@ -41,33 +66,44 @@ class Layout extends Component {
                 paddingTop: 0,
               }}
             >
-              {this.props.ctr}
+              {ctr}
               <div>
-                <button onClick={this.props.onIncrementCounter}>Increment</button>
-                <button onClick={this.props.onDecrementCounter}>Decrement</button>
-                <button onClick={this.props.onAddCounter}>Add 5</button>
-                <button onClick={this.props.onSubstractCounter}>Subtract 5</button>
+                <button type="button" onClick={onIncrementCounter}>
+                  Increment
+                </button>
+                <button type="button" onClick={onDecrementCounter}>
+                  Decrement
+                </button>
+                <button type="button" onClick={onAddCounter}>
+                  Add 5
+                </button>
+                <button type="button" onClick={onSubstractCounter}>
+                  Subtract 5
+                </button>
               </div>
-              <br/>
-              <hr/>
-              <button onClick={() => this.props.onStoreResult(this.props.ctr)}>Store Result</button>
+              <br />
+              <hr />
+              <button type="button" onClick={() => onStoreResult(ctr)}>
+                Store Result
+              </button>
               <ul>
-                {this.props.storedResults.map(el => (
-                  <li key={el.id} onClick={() => this.props.onRemoveResult(el.id)}>{el.value}</li>
+                {storedResults.map(el => (
+                  /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions, jsx-a11y/click-events-have-key-events */
+                  <li key={el.id} onClick={() => onRemoveResult(el.id)}>
+                    {el.value}
+                  </li>
                 ))}
               </ul>
-              {this.props.children}
+              {children}
             </div>
           </>
         )}
       />
-    )
+    );
   }
 }
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
+Layout.propTypes = propTypes;
 
 const mapStateToProps = state => {
   return {
@@ -87,4 +123,7 @@ const mapDispatchToProps = dispach => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Layout);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Layout);
