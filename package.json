@@ -29,6 +29,7 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
+    "dotenv": "^6.0.0",
     "gatsby": "^2.0.0-rc.13",
     "gatsby-plugin-favicon": "^3.1.4",
     "gatsby-plugin-google-tagmanager": "^2.0.0-rc.1",
