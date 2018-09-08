@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: '.env',
+});
+
 module.exports = {
   siteMetadata: {
     title: 'Gatsby Sleek Starter',
@@ -52,7 +56,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-tagmanager',
       options: {
-        id: 'TODO: ADD GTM ID',
+        id: process.env.GTM_CONTAINER_ID,
         includeInDevelopment: false,
       },
     },
