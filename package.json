@@ -5,7 +5,14 @@
   "author": "Jan Czizikow <jan.czizikow@gmail.com>",
   "license": "MIT",
   "private": false,
+  "lint-staged": {
+    "src/**/*.{js,jsx,json}": [
+      "prettier --config .prettierrc --write",
+      "git add"
+    ]
+  },
   "scripts": {
+    "precommit": "lint-staged",
     "dev": "gatsby develop",
     "build": "gatsby build",
     "format": "prettier --write 'src/**/*.js'",
@@ -24,6 +31,8 @@
     "gatsby-plugin-resolve-src": "^2.0.0-beta.1",
     "gatsby-plugin-sharp": "^2.0.0-rc.3",
     "gatsby-plugin-sitemap": "^2.0.0-rc.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.2",
     "prop-types": "^15.6.2",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
