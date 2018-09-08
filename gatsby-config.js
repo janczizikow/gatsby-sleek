@@ -77,5 +77,7 @@ module.exports = {
         includeInDevelopment: false,
       },
     },
+    'gatsby-plugin-netlify-cache',
+    'gatsby-plugin-netlify', // make sure to put last in the array
   ],
 };

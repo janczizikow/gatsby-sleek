@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby';
 import Image from 'gatsby-image';
 
 import Layout from 'layout';
+import Counter from 'containers/counter';
 
 const propTypes = {
   data: PropTypes.instanceOf(Object),
@@ -12,11 +13,16 @@ const propTypes = {
 const IndexPage = ({ data }) => (
   <Layout>
     <h1>Hi people</h1>
-    <div style={{ width: 250 }}>
-      <Image
-        style={{ width: '100%', height: 'auto', verticalAlign: 'middle' }}
-        fluid={data.iconImage.childImageSharp.fluid}
-      />
+    <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
+      <div style={{ flex: '0 0 150px', maxWidth: 150, marginRight: 30 }}>
+        <Image
+          style={{ width: '100%', height: 'auto', verticalAlign: 'middle' }}
+          fluid={data.iconImage.childImageSharp.fluid}
+        />
+      </div>
+      <div style={{ flex: '0 0 auto', maxWidth: '100%' }}>
+        <Counter />
+      </div>
     </div>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
@@ -32,7 +38,7 @@ export const pageQuery = graphql`
   query {
     iconImage: file(relativePath: { regex: "/icon/" }) {
       childImageSharp {
-        fluid(maxWidth: 200, maxHeight: 200) {
+        fluid(maxWidth: 300, maxHeight: 300) {
           ...GatsbyImageSharpFluid
         }
       }
