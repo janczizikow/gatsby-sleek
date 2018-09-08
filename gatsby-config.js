@@ -1,13 +1,13 @@
 module.exports = {
   siteMetadata: {
     title: 'Gatsby Sleek Starter',
-    siteUrl: 'https://www.example.com'
+    siteUrl: 'https://www.example.com',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-eslint',
     'gatsby-plugin-resolve-src',
-    // https://github.com/escaladesports/gatsby-plugin-polyfill-io/issues/1
-    // 'gatsby-plugin-polyfill-io',
+    'gatsby-plugin-polyfill-io',
     {
       resolve: 'gatsby-plugin-nprogress',
       options: {
@@ -57,4 +57,4 @@ module.exports = {
       },
     },
   ],
-}
+};
