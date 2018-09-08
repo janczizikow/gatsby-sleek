@@ -11,8 +11,9 @@ The starter includes:
 * PropTypes
 * Redux with [redux-thunk](https://github.com/reduxjs/redux-thunk)
 * Eslint with [Airbnb JS styleguide](https://github.com/airbnb/javascript)
+* Styelint with [stylelint-config-recommended](https://github.com/stylelint/stylelint-config-recommended)
 * [Prettier](https://github.com/prettier/prettier) for code formating
-* [Husky](https://github.com/typicode/husky) precommit hooks
+* [Husky](https://github.com/typicode/husky) precommit hooks for linting js and css
 * Jest and Enzyme for testing
 * Handy gatsby plugins:
   * [gatsby-plugin-polyfill-io](https://github.com/escaladesports/gatsby-plugin-polyfill-io) - polyfilling with [Polyfill.io](https://polyfill.io/v2/docs/)
