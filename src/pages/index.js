@@ -4,7 +4,7 @@ import { Link, graphql } from 'gatsby';
 import Image from 'gatsby-image';
 
 import Layout from 'layout';
-import Counter from 'containers/counter';
+import Counter from 'containers/Counter';
 
 const propTypes = {
   data: PropTypes.instanceOf(Object),
