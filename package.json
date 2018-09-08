@@ -38,6 +38,7 @@
     "gatsby-plugin-offline": "^2.0.0-rc.4",
     "gatsby-plugin-polyfill-io": "^1.0.5",
     "gatsby-plugin-react-helmet": "^3.0.0-rc.1",
+    "gatsby-plugin-react-svg": "^2.0.0-beta1",
     "gatsby-plugin-resolve-src": "^2.0.0-beta.1",
     "gatsby-plugin-sharp": "^2.0.0-rc.3",
     "gatsby-plugin-sitemap": "^2.0.0-rc.1",
