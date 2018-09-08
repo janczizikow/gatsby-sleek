@@ -8,10 +8,14 @@ The starter includes:
 
 * Gatsby v2
 * React 16
+* PropTypes
 * Redux with [redux-thunk](https://github.com/reduxjs/redux-thunk)
-* Jest and Enzyme for testing
+* Eslint with [Airbnb JS styleguide](https://github.com/airbnb/javascript)
 * [Prettier](https://github.com/prettier/prettier) for code formating
+* [Husky](https://github.com/typicode/husky) precommit hooks
+* Jest and Enzyme for testing
 * Handy gatsby plugins:
+  * [gatsby-plugin-polyfill-io](https://github.com/escaladesports/gatsby-plugin-polyfill-io) - polyfilling with [Polyfill.io](https://polyfill.io/v2/docs/)
   * [gatsby-plugin-favicon](https://github.com/Creatiwity/gatsby-plugin-favicon) - generating favicons for different browsers and devices
   * [gatsby-plugin-google-tagmanager](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-google-tagmanager) - easily add GTM to the gatsby site
   * [gatsby-plugin-manifest](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-manifest) - generates manifest
